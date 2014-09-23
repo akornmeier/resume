@@ -2,16 +2,22 @@
 <html ng-app="app">
   <head>
     <title><%= pkg.name %></title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="/css/app.css" media="all" />
   </head>
-  <body>
-    <div class="row">
-      <div class="large-12">
-        <h1>A Lineman Angular Setup</h1>
+  <body class="theme-bg" ng-controller="HomeController" ng-class="pageClass">
+    <a id="prev" class="navigation-arrow" ng-hide="hidePrev" ng-click="prevPage()"><i class="fa fa-chevron-left fa-big"></i></a>
+    <div class="static-container">
         <div id="view" ng-view></div>
-      </div>
     </div>
-
+    <a id="next" class="navigation-arrow" ng-hide="hideNext" ng-click="nextPage()"><i class="fa fa-chevron-right fa-big"></i></a>
+    <footer>
+        <ul class="menu">
+            <li ng-repeat="item in menu">
+              <button ng-class="{ 'selected': $index == selectedIndex }" ng-click="pickMe($index)"></button>
+            </li>
+          </ul>
+      </footer>
     <script type="text/javascript" src="/js/app.js"></script>
   </body>
 </html>
