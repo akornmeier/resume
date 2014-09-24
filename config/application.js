@@ -23,8 +23,6 @@ module.exports = function(lineman) {
     //   }
     // }
 
-    enableSass: true,
-
     livereload: true,
 
     concat_sourcemap: {
@@ -52,7 +50,7 @@ module.exports = function(lineman) {
       //   host: 'localhost',
       //   port: 3000
       // }
-    }
+    },
 
     // Sass
     //
@@ -60,7 +58,7 @@ module.exports = function(lineman) {
     // have Ruby installed as well as the `sass` gem. To enable it, comment out the
     // following line:
     //
-    // enableSass: true
+    enableSass: true,
 
     // Asset Fingerprints
     //
@@ -68,7 +66,7 @@ module.exports = function(lineman) {
     // and logging a manifest of logical-to-hashed filenames in dist/assets.json
     // via grunt-asset-fingerprint
     //
-    // enableAssetFingerprint: true
+    enableAssetFingerprint: true
 
   };
 };

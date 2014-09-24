@@ -27,7 +27,7 @@ angular.module("app").controller "HomeController", ["$scope", "$location",
     index = _.indexOf($scope.menu, $location.path().replace("/", "")) + 1
 
     # Exit if this is the last page
-    return  if index >= $scope.menu.length
+    return if index >= $scope.menu.length
 
     $scope.selectedIndex = index
     $location.path $scope.menu[index]
@@ -36,7 +36,7 @@ angular.module("app").controller "HomeController", ["$scope", "$location",
     index = _.indexOf($scope.menu, $location.path().replace("/", "")) - 1
 
     # Exit if this is the last page
-    return  if index < 0
+    return if index < 0
 
     $scope.selectedIndex = index
     $location.path $scope.menu[index]
