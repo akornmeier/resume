@@ -1,4 +1,4 @@
-angular.module("app").config ($routeProvider, $locationProvider) ->
+angular.module("app").config ["$routeProvider", "$locationProvider", ($routeProvider, $locationProvider) ->
   $locationProvider.html5Mode true
 
   $routeProvider.when "/hello",
@@ -15,6 +15,8 @@ angular.module("app").config ($routeProvider, $locationProvider) ->
 
   $routeProvider.when "/contact",
     templateUrl: "contact.html"
-    #controller: "HomeController" 
+    #controller: "HomeController"
 
   $routeProvider.otherwise redirectTo: "/hello"
+
+]
